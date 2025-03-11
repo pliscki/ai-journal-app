@@ -1,0 +1,65 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# .NET build artifacts
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Visual Studio files
+.vs/
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.sln.docstates
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vsix
+*.dotCover
+*.dotSettings
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+
+# Development environment files
+launchSettings.json
+appsettings.Development.json
+*.Development.json
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS specific files
+.DS_Store
+Thumbs.db

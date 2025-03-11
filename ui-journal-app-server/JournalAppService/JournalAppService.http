@@ -1,0 +1,6 @@
+@JournalAppServiceHostAddress = http://localhost:5242
+
+GET {{JournalAppServiceHostAddress}}/weatherforecast/
+Accept: application/json
+
+###
