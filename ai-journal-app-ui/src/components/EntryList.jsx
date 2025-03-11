@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import DayGroup from './DayGroup';
 
-const EntryList = ({ entries }) => {
+const EntryList = ({ entries, onEditEntry, onDeleteEntry, isLoading }) => {
   // Group entries by date
   const groupedEntries = useMemo(() => {
     return entries.reduce((groups, entry) => {
@@ -30,7 +30,11 @@ const EntryList = ({ entries }) => {
       </h2>
       
       <div aria-live="polite">
-        {sortedDates.length === 0 ? (
+        {isLoading && entries.length === 0 ? (
+          <p className="text-gray-500 text-center py-6">
+            Loading journal entries...
+          </p>
+        ) : sortedDates.length === 0 ? (
           <p className="text-gray-500 italic text-center py-6">
             No journal entries yet. Start writing!
           </p>
@@ -40,7 +44,9 @@ const EntryList = ({ entries }) => {
               <li key={date}>
                 <DayGroup 
                   date={date} 
-                  entries={groupedEntries[date]} 
+                  entries={groupedEntries[date]}
+                  onEdit={onEditEntry}
+                  onDelete={onDeleteEntry}
                 />
               </li>
             ))}
